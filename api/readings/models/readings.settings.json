@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "readings",
+  "info": {
+    "name": "Readings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "string"
+    },
+    "SpreadPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "CardPhoto": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Thoughts": {
+      "type": "richtext"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "readings"
+    }
+  }
+}
