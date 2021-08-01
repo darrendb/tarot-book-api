@@ -3,12 +3,18 @@
   "private": true,
   "version": "0.1.0",
   "description": "Manage your Tarot Readings",
+  "main": "index.js",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "keywords": [
+    "tarot",
+    "diary",
+    "journal"
+  ],
   "devDependencies": {},
   "dependencies": {
     "strapi": "3.6.5",
@@ -24,15 +30,13 @@
     "knex": "0.21.18",
     "sqlite3": "5.0.0"
   },
-  "author": {
-    "name": "jrb-ddb"
-  },
+  "author": "jrb-ddb",
+  "license": "MIT",
   "strapi": {
     "uuid": "ab6716d2-f132-4c15-ab71-5b41e7170f44"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=10.16.0 <=16.x.x",
     "npm": "^6.0.0"
-  },
-  "license": "MIT"
+  }
 }
