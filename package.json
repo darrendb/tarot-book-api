@@ -1,8 +1,8 @@
 {
-  "name": "tarot",
+  "name": "tarot-book",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Manage your Tarot Readings",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -25,7 +25,7 @@
     "sqlite3": "5.0.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "jrb-ddb"
   },
   "strapi": {
     "uuid": "ab6716d2-f132-4c15-ab71-5b41e7170f44"
