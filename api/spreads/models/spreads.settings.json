@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spreads",
+  "info": {
+    "name": "spreads",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "spread_comment": {
+      "type": "richtext",
+      "default": "(Commentary about this Spread)"
+    },
+    "spread_layout_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "spread_type": {
+      "type": "string",
+      "default": "(e.g. Daily Planner)",
+      "required": true
+    },
+    "spread_positions": {
+      "collection": "positions"
+    }
+  }
+}

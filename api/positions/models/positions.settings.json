@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "positions",
+  "info": {
+    "name": "positions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card_name": {
+      "type": "string",
+      "required": true,
+      "default": "("
+    },
+    "position_comment": {
+      "type": "richtext"
+    },
+    "card_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "position_prompt": {
+      "type": "string",
+      "required": true,
+      "default": "(Position / Prompt)"
+    }
+  }
+}

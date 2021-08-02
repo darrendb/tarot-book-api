@@ -60,7 +60,7 @@
       "configurable": false
     },
     "readings": {
-      "via": "Author",
+      "via": "reading_author",
       "collection": "readings"
     }
   }

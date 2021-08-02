@@ -12,10 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Type": {
-      "type": "string"
+    "reading_slug": {
+      "type": "string",
+      "unique": true
     },
-    "SpreadPhoto": {
+    "reading_date": {
+      "type": "date",
+      "required": true
+    },
+    "reading_name": {
+      "type": "string",
+      "required": true,
+      "default": "(e.g. Daily 2021-08-16)"
+    },
+    "reading_author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "readings"
+    },
+    "reading_spread": {
+      "model": "spreads"
+    },
+    "reading_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -24,33 +42,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "CardPhoto": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "Thoughts": {
-      "type": "richtext"
-    },
-    "Slug": {
-      "type": "string"
-    },
-    "Date": {
-      "type": "date"
-    },
-    "Name": {
-      "type": "string"
-    },
-    "Author": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "readings"
     }
   }
 }
